@@ -103,7 +103,7 @@ def isSuccess(sun,pw,again):
     flag = re.findall("frameborder=\"NO(.*?)\"",text,re.S)
     if(flag):
         print "right: 成功获取到一组."
-        infoUrl = "**********"#自己在登录教务处后抓取
+        infoUrl = "**********"#自己在登录教务处后抓取,就是右击个人信息栏可以得到的URL
         infoData = urllib2.urlopen(infoUrl)
         infotext = infoData.read()
         selector = etree.HTML(infotext)
